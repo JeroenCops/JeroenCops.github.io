@@ -1,0 +1,36 @@
+<div class="site-wrapper">
+  <div class="site-wrapper-inner">
+    <div style="height: 30px; background: #41916a; position: relative; z-index: 9999">
+      <p style="text-align: center; font-size: 14px; padding-top: 4px; color: #222">The website is currently under construction.</p>
+    </div>
+
+    <!-- header -->
+    <div class="masthead clearfix">
+      <div class="inner">
+        <a href="/">
+          <h3 class="masthead-brand">
+            <img src="../assets/jeroen_cops.png">
+            Jeroen Cops
+          </h3>
+        </a>
+        <!-- Site navigation -->
+        <nav>
+          <ul class="nav masthead-nav">
+            <li id="home" class="active"><a href="/">Home</a></li>
+            <li id="articles"><a href="/articles/">Articles</a></li>
+            <li id="projects"><a href="/projects/">Projects</a></li>
+            <li id="about"><a href="/about/">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+  {% if is_post %}
+    <!-- Post contents -->
+    {% include "_layouts/post.liquid" %}
+  {% else %}
+    <!-- Page contents -->
+    {{ content }}
+  {% endif %}
+  </div>
+</div>

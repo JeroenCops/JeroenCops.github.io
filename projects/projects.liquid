@@ -1,0 +1,63 @@
+extends: default.liquid
+
+title:   Projects
+path:    projects/
+---
+<!-- Page header -->
+<header class="page-header">
+  <h1>Projects</h1>
+</header>
+
+<main>
+  <div class="text-wrapper center" style="margin-top: 20px">
+    <!-- Project link 1 -->
+    <div class="page-text-block clearfix">
+      <a href="/projects/rustbook">
+        <div class="thumbnail">
+          <img src="../assets/rust_logo.png" alt="image"/>
+        </div>
+        <h4>The Rust book</h4>
+      </a>
+      <p style="font-size: 12px; margin-bottom: 0.2em; color: #767676">Technologie used mdbook</p>
+      <p>
+        Rust is a systems programming language, that is focused on safety, speed, and concurrency.
+        It achieves all these goals without having a garbage collector.
+        It provides a number of compile-time safety checks that produce no runtime overhead, while eliminating all data races.
+        This is the Dutch translation of the book. So have fun!
+      </p>
+    </div>
+    <hr>
+    <!-- Project link 2 -->
+    <div class="page-text-block clearfix">
+      <a href="/projects/website">
+        <div class="thumbnail">
+          <img src="../assets/jeroen_cops.png" alt"image"/>
+        </div>
+        <h4>The Website</h4>
+      </a>
+      <p style="font-size: 12px; margin-bottom: 0.2em; color: #767676">Technologie used Cobalt, HTML5, CSS3, Javascript, Jquery</p>
+      <p>
+        This website is generated with Cobalt, a static website generator written in Rust.
+        It uses liquid templates and markdown to generate HTML pages.
+      </p>
+    </div>
+    <hr>
+    <!-- Project link 3 -->
+    <div class="page-text-block clearfix">
+      <a href="/projects/sintel">
+        <div class="thumbnail">
+          <img src="../assets/sintel_logo.png" alt"image"/>
+        </div>
+        <h4>Sintel</h4>
+      </a>
+      <p style="font-size: 12px; margin-bottom: 0.2em; color: #767676">Technologie used Rust, Dyon</p>
+      <p>
+        Sintel is a a 2D game engine and is not a general purpose engine.
+        This engine is build for building 2d isometric games.
+        Sintel is written in Rust, a safe system programming language.
+        Sintel is a collection of seperate libraries that make up the game engine.
+      </p>
+    </div>
+    <hr>
+  </div>
+</main>

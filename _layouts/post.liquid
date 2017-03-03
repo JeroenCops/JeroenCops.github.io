@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <!-- Page header -->
+    <header class="page-header">
+      <i href="javascript:void(0)" onclick="toggleSideNav()" id="toggle-menu" class="fa fa-bars" aria-hidden="true"></i>
+      <h1>{{category | capitalize }}s</h1>
+    </header>
+
+    <main>
+      <div class="text-wrapper center clearfix">
+        <!-- Side Navigation -->
+        <aside class="sidenav">
+          <!-- Article links -->
+          <ul style="list-style-type:none">
+
+            <!-- Update links -->
+            <li><a href="javascript:void(0)" onclick="openTab('Updates')"</a><h4 style="padding-bottom: 0.5em">Updates</h4>
+              <ul id="Updates" style="display:display; padding-left:0; list-style-type:none" class="tab">
+                {% for post in posts %}
+                  {% if post.category == "update" %}
+                  <li>
+                    <h5><a href="../{{post.path}}">{{post.title}}</a></h5>
+                  </li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+              <hr>
+            </li>
+
+            <!-- Tutorial links -->
+            <li><a href="javascript:void(0)" onclick="openTab('Tutorials')"</a><h4 style="padding-bottom: 0.5em">Tutorials</h4>
+              <ul id="Tutorials" style="display:none; padding-left:0; list-style-type:none" class="tab">
+                {% for post in posts %}
+                  {% if post.category == "tutorial"%}
+                  <li>
+                    <h5><a href="../{{post.path}}">{{post.title}}</a></h5>
+                  </li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+              <hr>
+            </li>
+
+            <!-- Post links -->
+            <li><a href="javascript:void(0)" onclick="openTab('Posts')"</a><h4 style="padding-bottom: 0.5em">Posts</h4>
+              <ul id="Posts" style="display:none; padding-left:0; list-style-type:none" class="tab">
+                {% for post in posts %}
+                  {% if post.category == "post"%}
+                  <li>
+                    <h5><a href="../{{post.path}}">{{post.title}}</a></h5>
+                  </li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+              <hr>
+            </li>
+          </ul>
+        </aside>
+
+        <!-- Article -->
+        <section>
+          <!-- Thumbnail Article -->
+          <img src="{{thumbnail}}" alt="image" style="width: 100%"/>
+          <!-- Title Article -->
+          <h2 class="text-center" style="border: none; padding: 0; margin-bottom: 0">{{ title }}</h2>
+          <!-- Date Article -->
+          <div class="date-article center" style="color: #767676">Published on {{ date | date: "%u %b. %Y"}}</div>
+          <article style="block">
+            <!-- Contents Article -->
+            {{ content }}
+
+            <!-- Previous Article -->
+            <div class="previous">
+              <a href=""><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Previous</a>
+            </div>
+
+            <!-- Next Article -->
+            <div class="next">
+              <a href="">Next <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+            </div>
+
+          </article>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
