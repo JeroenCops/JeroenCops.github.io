@@ -18,7 +18,7 @@ before_script:
   - cobalt --version
   - cd ..
   - ls
-  - cd target
+  - cd JeroenCops.github.io
 script:
   - cobalt build
 after_succes: |
