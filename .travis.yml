@@ -11,11 +11,13 @@ cache: cargo
 before_script:
   - cd ..
   - git clone https://github.com/cobalt-org/cobalt.rs.git
+  - ls
   - cd cobalt.rs
   - cargo install --force || true
   - export PATH="$PATH:/home/travis/.cargo/bin"
   - cobalt --version
   - cd ..
+  - ls
   - cd target
 script:
   - cobalt build
