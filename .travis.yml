@@ -15,6 +15,7 @@ before_script:
   - cargo install --force || true
   - export PATH="$PATH:/home/travis/.cargo/bin"
   - cobalt --version
+  - cd ..
   - cd target
 script:
   - cobalt build
