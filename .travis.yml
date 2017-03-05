@@ -9,8 +9,12 @@ matrix:
     rust: nightly
 cache: cargo
 before_script:
-  - cargo install cobalt-bin || true
+  - git clone https://github.com/cobalt-org/cobalt.rs.git
+  - ls
+  - cd cobalt.rs
+  - cargo install || true
   - export PATH="$PATH:/home/travis/.cargo/bin"
+  - cobalt --version
 script:
   - cobalt build
 after_succes: |
