@@ -1,3 +1,4 @@
+sudo: false
 language: rust
 rust:
   - stable
@@ -6,3 +7,16 @@ rust:
 matrix:
   allow_failures:
     rust: nightly
+cache: cargo
+before_script:
+  - cargo install cobalt-bin || true
+  - export PATH="$PATH:/home/travis/.cargo/bin"
+script:
+  - cobalt build
+after_succes: |
+  [ $TRAVIS_BRANCH = source ] &&
+  [ $TRAVIS_PULL_REQUEST = false ] &&
+  cobalt import --branch master &&
+  git config user.name "Cobalt Site Deployer" &&
+  git config user.email "jernncops@live.be" &&
+  git push -fq https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git master
