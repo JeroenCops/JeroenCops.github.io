@@ -16,7 +16,7 @@
 <meta name="description" content="Jeroen Cops, a website for all my projects and more.">
 <meta name="keywords" content="rust, jeroen, cops">
 
-  <title>Jeroen Cops</title>
+  <title>Jeroen Cops | Website release</title>
 
 <link rel="icon" type="image/png" href="../assets/jeroen_cops.png" />
 
@@ -77,57 +77,101 @@
     </div>
 
   
-    <!-- Page contents -->
-    <!-- Page-header -->
-<div class="project-cover">
-  <div class="project-header">
-    <img class="thumbnail-project" src="../assets/rust_logo.png" alt="image"/>
-    <h1>The Rust book</h1>
-  </div>
-</div>
+    <!-- Post contents -->
+    <!DOCTYPE html>
+<html>
+  <body>
 
-<main>
-  <!-- Project Navigation -->
-    <div class="projecthead" style="text-align: center">
-      <nav>
-        <ul class="nav projecthead-nav">
-          <li><a href="/projects/rust_book/index.html">Read</a></li>
-          <li><a href="https://github.com/JeroenCops/LearningRust">Source</a></li>
-        </ul>
-      </nav>
-    </div>
-    
-  <div class="text-wrapper center">
-    <div class="intro center">
-    <div class="page-tag">
-      <div>Markdown</div>
-    </div>
-  </div>
-  <div class="intro text-center center">
-    I started writing this book, because I wanted to learn Rust and also help the community in some way. So I translated the Rust book to Dutch.
-    The book is generated with mdbook.
-  </div>
-  <div class="intro text-center center">
-  <h2>Cargo</h2>
-  <div class="project-text-block">
-    Cargo is a tool that Rustaceans use to help manage their Rust projects. Cargo manages three things: building our code,
-    downloading the dependencies our code needs, and building those dependencies.
-  </div>
-  </div>
-  <img class="project-img" src="../assets/image-project-test.jpg" alt="image"/>
-  <div class="intro center">
-  <h2>Crates.io</h2>
-  <div class="project-text-block">
-    Crates.io is the place were we publish our rust crates to.
-    <img class="thumbnail-project" src="../assets/Cargo-Logo.png" alt="image"/>
-  </div>
-  <h2>Tools</h2>
-  <div class="project-text-block">
-    There are all sort of plugins avialable for different text editors.
-  </div>
-</div>
-</div>
-</main>
+    <!-- Page header -->
+    <header class="page-header">
+      <i href="javascript:void(0)" onclick="toggleSideNav()" id="toggle-menu" class="fa fa-bars" aria-hidden="true"></i>
+      <h1>Updates</h1>
+    </header>
+
+    <main>
+      <div class="text-wrapper center clearfix">
+        <!-- Side Navigation -->
+        <aside class="sidenav">
+          <!-- Article links -->
+          <ul style="list-style-type:none">
+
+            <!-- Update links -->
+            <li><a href="javascript:void(0)" onclick="openTab('Updates')"</a><h4 style="padding-bottom: 0.5em">Updates</h4>
+              <ul id="Updates" style="display:display; padding-left:0; list-style-type:none" class="tab">
+                
+                  
+                  <li>
+                    <h5><a href="../articles/update-00.html">Website release</a></h5>
+                  </li>
+                  
+                
+              </ul>
+              <hr>
+            </li>
+
+            <!-- Tutorial links -->
+            <li><a href="javascript:void(0)" onclick="openTab('Tutorials')"</a><h4 style="padding-bottom: 0.5em">Tutorials</h4>
+              <ul id="Tutorials" style="display:none; padding-left:0; list-style-type:none" class="tab">
+                
+                  
+                
+              </ul>
+              <hr>
+            </li>
+
+            <!-- Post links -->
+            <li><a href="javascript:void(0)" onclick="openTab('Posts')"</a><h4 style="padding-bottom: 0.5em">Posts</h4>
+              <ul id="Posts" style="display:none; padding-left:0; list-style-type:none" class="tab">
+                
+                  
+                
+              </ul>
+              <hr>
+            </li>
+          </ul>
+        </aside>
+
+        <!-- Article -->
+        <section>
+          <!-- Thumbnail Article -->
+          <img src="../assets/jeroen_cops.png" alt="image" style="width: 100%"/>
+          <!-- Title Article -->
+          <h2 class="text-center" style="border: none; padding: 0; margin-bottom: 0">Website release</h2>
+          <!-- Date Article -->
+          <div class="date-article center" style="color: #767676">Published on 7 Mar. 2017</div>
+          <article style="block">
+            <!-- Contents Article -->
+            <h3>Release</h3>
+<p>The website is finally online. Now let the hunting for bugs begin!</p>
+<h3>Issues</h3>
+<ul>
+<li>When the user is on a current page, set the link of that page active<a href="https://github.com/JeroenCops/JeroenCops.github.io/issues/1">(issue#1)</a></li>
+<li>Project pages aren't loading correctly<a href="https://github.com/JeroenCops/JeroenCops.github.io/issues/2">(issue#2)</a></li>
+<li>Use Travis CI for building and deploying the website<a href="https://github.com/JeroenCops/JeroenCops.github.io/issues/3">(issue#3)</a></li>
+<li>RSS footer link not working correctly<a href="https://github.com/JeroenCops/JeroenCops.github.io/issues/4">(issue#4)</a></li>
+</ul>
+<h3>Closed Issues</h3>
+<ul>
+<li>Closed <a href="https://github.com/JeroenCops/JeroenCops.github.io/issues/4">(issue#4)</a> with <a href="https://github.com/JeroenCops/JeroenCops.github.io/commit/597d33f45a45e511d482c0d3a3794e6a83e37eb3">RSS link fix</a></li>
+</ul>
+
+
+            <!-- Previous Article -->
+            <div class="previous">
+              <a href=""><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Previous</a>
+            </div>
+
+            <!-- Next Article -->
+            <div class="next">
+              <a href="">Next <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+            </div>
+
+          </article>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
 
   
   </div>
