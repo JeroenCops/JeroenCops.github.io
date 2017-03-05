@@ -10,9 +10,9 @@ tags: [website, cobalt, release]
 
 ### Release
 
-The website is finally online. Now let the hunting for bugs begin!
+The website is finally online. Now let's hunt for bugs!
 
-### Issues
+### New Issues
 
 * When the user is on a current page, set the link of that page active[(issue#1)](https://github.com/JeroenCops/JeroenCops.github.io/issues/1)
 * Project pages aren't loading correctly[(issue#2)](https://github.com/JeroenCops/JeroenCops.github.io/issues/2)

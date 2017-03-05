@@ -16,7 +16,7 @@ before_script:
   - cd JeroenCops.github.io
 script:
   - cobalt build
-after_succes: |
+after_success: |
   [ $TRAVIS_BRANCH = source ] &&
   [ $TRAVIS_PULL_REQUEST = false ] &&
   cobalt import --branch master &&
