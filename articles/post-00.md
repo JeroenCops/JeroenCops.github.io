@@ -2,6 +2,7 @@ extends: default.liquid
 
 title: Lorem Ipsum
 date: 05 Mar 2017 21:00:00 +0100
+path: articles/posts/:year/:month
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 thumbnail:
 category: post
