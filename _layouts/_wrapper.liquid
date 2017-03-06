@@ -16,10 +16,10 @@
         <!-- Site navigation -->
         <nav>
           <ul class="nav masthead-nav">
-            <li id="home" class="active"><a href="/">Home</a></li>
-            <li id="articles"><a href="/articles/">Articles</a></li>
-            <li id="projects"><a href="/projects/">Projects</a></li>
-            <li id="about"><a href="/about/">About</a></li>
+            <li id="home" class="{%if route == "home"%}active{%endif%}"><a href="/">Home</a></li>
+            <li id="articles" class="{%if route == "articles"%}active{%endif%}"><a href="/articles/">Articles</a></li>
+            <li id="projects" class="{%if route == "projects"%}active{%endif%}"><a href="/projects/">Projects</a></li>
+            <li id="about" class="{%if route == "about"%}active{%endif%}"><a href="/about/">About</a></li>
           </ul>
         </nav>
       </div>
