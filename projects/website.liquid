@@ -8,7 +8,7 @@ path:    projects/website/
 <!-- Project header -->
 <div class="project-cover">
   <div class="project-header">
-    <img class="thumbnail-project" src="../assets/jeroen_cops.png" alt="image"/>
+    <img class="thumbnail-project" src="/assets/jeroen_cops.png" alt="image"/>
     <h1>The website</h1>
   </div>
 </div>
@@ -34,7 +34,7 @@ path:    projects/website/
 
     <h2>Cobalt</h2>
     <div class="project-text-block">
-      <img class="thumbnail-project" src="../assets/cobalt_logo.png" alt="image"/>
+      <img class="thumbnail-project" src="/assets/cobalt_logo.png" alt="image"/>
       This website was generated with Cobalt, which is a static website generator similar to
       Jekyll. Cobalt is written in Rust, so it Cobalt can turn the Liquid templates, MarkDown files almost instantly into HTML.
       Because it's static makes it also easy to deploy anywhere, you don't have to mess with SQL and php, I just can focus on the content.
@@ -53,7 +53,7 @@ path:    projects/website/
     <h2>Changes</h2>
     {% for post in posts %}
       <h4>
-        <a href="../{{post.path}}">{{post.title}}</a>
+        <a href="/{{post.path}}">{{post.title}}</a>
 
       </h4>
     {% endfor %}

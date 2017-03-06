@@ -3,7 +3,7 @@ extends: default.liquid
 title: Release Website
 date: 05 Mar 2017 21:00:00 +0100
 description: Website is finally online, but still has some issues that needs to be resolved.
-thumbnail: ../assets/jeroen_cops.png
+thumbnail: /assets/jeroen_cops.png
 category: update
 tags: [website, cobalt, release]
 ---
