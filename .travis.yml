@@ -17,7 +17,7 @@ before_script:
   - mdbook build
   - ls
   - cd ..
-  - cp -r LearningRust/book JeroenCops.github.io/src/build/projects
+  - cp -r LearningRust/root JeroenCops.github.io/src/build/projects
   - cd JeroenCops.github.io/src
 script:
   - cobalt --version
