@@ -12,8 +12,11 @@ before_script:
   - cargo install --force || true
   - export PATH="$PATH:/home/travis/.cargo/bin"
   - cd ..
+  - cd LearningRust
   - mdbook --version
-  - mdbook build LearningRust
+  - mdbook build
+  - ls
+  - cd ..
   - cp -r LearningRust/book JeroenCops.github.io/src/build/projects
   - cd JeroenCops.github.io/src
 script:
