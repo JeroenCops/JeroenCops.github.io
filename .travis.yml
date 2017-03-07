@@ -5,14 +5,19 @@ rust:
 cache: cargo
 before_script:
   - cd ..
+  - git clone https://github.com/JeroenCops/LearningRust.git
+  - cargo install mdbook
   - git clone https://github.com/cobalt-org/cobalt.rs.git
   - cd cobalt.rs
   - cargo install --force || true
   - export PATH="$PATH:/home/travis/.cargo/bin"
-  - cobalt --version
   - cd ..
+  - mdbook --version
+  - mdbook build LearningRust
+  - cp -r LearningRust/book JeroenCops.github.io/src/build/projects
   - cd JeroenCops.github.io/src
 script:
+  - cobalt --version
   - cobalt build
 after_success: |
   [ $TRAVIS_BRANCH = source ] &&
