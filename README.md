@@ -1,35 +1,38 @@
-<p align="center">
-  <img src="src/assets/jeroen_cops.png" alt="image"/>
-</p>
 
-<h1 align="center">Jeroen Cops</h1>
+<html>
+  <p align="center">
+    <img src="src/assets/jeroen_cops.png" alt="image"/>
+  </p>
 
-<h3 align="center">Cobalt</h3>
-<p align="center">
-  Cobalt is a static site generator. It's turns plain text into a static website.
-</p>
+  <h1 align="center">Jeroen Cops</h1>
 
-<div style="float: left; width: 33%; padding: 1em">
-  <h4>Fast</h4>
-  <p>
-    Rust is very fast, so Cobalt is to. It turns your plain text into HTML files in an instant.
+  <h3 align="center">Cobalt</h3>
+  <p align="center">
+    Cobalt is a static site generator. It's turns plain text into a static website.
   </p>
-</div>
-<div style="float: left; width: 33%; padding: 1em">
-  <h4>Easy</h4>
-  <p>
-    You only need to focus on the content of you custom website.
+
+  <div style="float: left; width: 33%; padding: 1em">
+    <h4>Fast</h4>
+    <p>
+      Rust is very fast, so Cobalt is to. It turns your plain text into HTML files in an instant.
+    </p>
+  </div>
+  <div style="float: left; width: 33%; padding: 1em">
+    <h4>Easy</h4>
+    <p>
+      You only need to focus on the content of you custom website.
+    </p>
+  </div>
+  <div style="float: left; width: 33%; padding: 1em">
+    <h4>Simple</h4>
+    <p>
+      You don't need to mess with databases, comment moderation.
+    </p>
+  <div>
+  <p style="clear: left">
+    Find more information on their [website](http://cobalt-org.github.io/) or check out their repository [Cobalt.rs](https://github.com/cobalt-org/cobalt.rs).
   </p>
-</div>
-<div style="float: left; width: 33%; padding: 1em">
-  <h4>Simple</h4>
-  <p>
-    You don't need to mess with databases, comment moderation.
-  </p>
-<div>
-<p style="clear: left">
-  Find more information on their [website](http://cobalt-org.github.io/) or check out their repository [Cobalt.rs](https://github.com/cobalt-org/cobalt.rs).
-</p>
+</html>
 
 ### Github Pages
 
