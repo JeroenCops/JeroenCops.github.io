@@ -8,18 +8,11 @@
 
 Cobalt is a static site generator. It's turns plain text into a static website.
 
-#### Fast
+* **Fast** - Rust is very fast, so Cobalt is to. It turns your plain text into HTML files in an instant.
 
-Rust is very fast, so Cobalt is to. It turns your plain text into HTML files in an instant.
+* **Easy** - You only need to focus on the content of you custom website.
 
-#### Easy
-
-You only need to focus on the content of you custom website.
-
-#### Simple
-
-You don't need to mess with databases, comment moderation.
-
+* **Simple** - You don't need to mess with databases, comment moderation.
 
 *Find more information on their [website](http://cobalt-org.github.io/) or check out their repository [Cobalt.rs](https://github.com/cobalt-org/cobalt.rs).*
 
