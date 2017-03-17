@@ -4,7 +4,7 @@ title: Release Website
 date: 05 Mar 2017 21:00:00 +0100
 path: articles/updates/:year/:month
 route: articles
-description: Website is finally online, but still has some issues that needs to be resolved.
+description: Website is finally online, but it still has some issues that need to be resolved.
 thumbnail: /assets/jeroen_cops.png
 category: update
 tags: [website, cobalt, release]

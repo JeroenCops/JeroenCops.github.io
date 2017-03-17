@@ -4,6 +4,11 @@
 
 <h1 align="center">Jeroen Cops</h1>
 
+<div align="center">
+This is the repository for the source code of my personal website, the source branch contains the source code and the master branch is where the website is hosted from. The technologie that this website uses, is listed below this paragraph.
+</div>
+___
+
 ### Cobalt
 
 Cobalt is a static site generator. It's turns plain text into a static website.
