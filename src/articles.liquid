@@ -15,16 +15,16 @@ route:   articles
   <div class="projecthead">
     <nav class="page-nav">
       <ul class="nav projecthead-nav" style="text-align: center">
-        <li class="active"><a href="javascript:void(0)" onclick="openAllTabs()">All</a></li>
-        <li><a href="javascript:void(0)" onclick="openTab('updates')">Updates</a></li>
-        <li><a href="javascript:void(0)" onclick="openTab('tutorials')">Tutorials</a></li>
-        <li><a href="javascript:void(0)" onclick="openTab('posts')">Posts</a></li>
+        <li class="active"><a href=".tab-content">All</a></li>
+        <li><a href="#updates">Updates</a></li>
+        <li><a href="#tutorials">Tutorials</a></li>
+        <li><a href="#posts">Posts</a></li>
       </ul>
     </nav>
   </div>
 
   <div class="text-wrapper center">
-    <article id="updates" style="display:display" class="tab">
+    <article id="updates" class="tab-content show">
       <!-- Heading thumbnails -->
       <h2 style="padding-left: 15px; margin-bottom: 1em">Updates</h2>
 
@@ -55,7 +55,7 @@ route:   articles
       <hr>
     </article>
 
-    <article id="tutorials" style="display:display" class="tab">
+    <article id="tutorials" class="tab-content show">
       <!-- Heading thumbnails -->
       <h2 style="padding-left: 15px; margin-bottom: 1em">Tutorials</h2>
 
@@ -86,7 +86,7 @@ route:   articles
       <hr>
     </article>
 
-    <article id="posts" style="display:display" class="tab">
+    <article id="posts" class="tab-content show">
       <!-- Heading thumbnails -->
       <h2 style="padding-left: 15px; margin-bottom: 1em">Posts</h2>
 
