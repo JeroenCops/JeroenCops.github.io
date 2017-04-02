@@ -7,18 +7,11 @@
 a {
   color: #41916a;
   text-decoration: none;
-
-  -webkit-transition: color .3s;
-  -moz-transition: color .3s;
-  -o-transition: color .3s;
-  -ms-transition: color .3s;
-  transition: color .3s;
 }
 
 a:hover,
 a:focus {
-  text-decoration: none;
-  color: #222;
+  color: #41916a;
 }
 
 .block-link {
@@ -92,7 +85,7 @@ aside {
   width: 0%;
   margin: 0;
   position: absolute;
-  z-index: 1;
+  z-index: 999;
   display: block;
   background-color: #fff;
   overflow-x: hidden;
@@ -201,7 +194,7 @@ main {
 }
 
 .thumbnail-crop {
-  width: 33.33%;
+  width: 25%;
   height: 56.25%;
   float: left;
   overflow: hidden;
@@ -218,10 +211,6 @@ main {
   width: 100%;
   padding-top: 56.25%s;
   border: none;
-}
-
-.thumbnail-crop a:hover {
-  text-decoration: underline;
 }
 
 .thumbnail-crop img:hover {
@@ -287,7 +276,6 @@ main {
   margin-bottom: 18px;
   margin-left: -0.6em;
   color: #222;
-  text-shadow: none;
   padding: -0.5em 0 0 0;
 }
 
@@ -322,7 +310,6 @@ main {
   color: #222; /* IE8 proofing */
   vertical-align: middle;
   text-align: center;
-  text-shadow: none;
 
   -webkit-transition: color .25s ease-out;
   -moz-transition: color .25s ease-out;
@@ -390,18 +377,15 @@ main {
 **************************************************************/
 .projecthead {
   width: 100%;
-  z-index: 150;
-  position: relative;;
-  bottom: 0;
-  margin-top: -2em;
+  z-index: 999;
+  position: relative;
 }
 
 .projecthead-nav {
   overflow: hidden;
-  padding: 0em;
   height: 3em;
   list-style: none;
-  width: 100%px;
+  width: 100%;
 }
 
 .projecthead-nav > li {
@@ -416,10 +400,9 @@ main {
   padding-left: 0;
   font-size: 12px;
   font-weight: normal;
-  color: #222; /* IE8 proofing */
+  color: #222;
   vertical-align: middle;
   text-align: center;
-  text-shadow: none;
 
   -webkit-transition: color .25s ease-out;
   -moz-transition: color .25s ease-out;
@@ -448,6 +431,14 @@ main {
   display: inherit;
 }
 
+.post-content {
+  display: none;
+}
+
+.post-content.show {
+  display: inherit;
+}
+
 /* Cover
 **************************************************************/
 
@@ -465,7 +456,7 @@ main {
 }
 
 .cover {
-  z-index: 1;
+  z-index: 999;
   padding: 8em .5em;
   text-align: center;
 }

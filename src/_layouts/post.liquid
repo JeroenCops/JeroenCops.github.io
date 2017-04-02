@@ -11,13 +11,12 @@
     <main>
       <div class="text-wrapper center clearfix">
         <!-- Side Navigation -->
-        <aside class="sidenav">
+        <aside class="sidenav side-nav">
           <!-- Article links -->
           <ul style="list-style-type:none">
-
             <!-- Update links -->
-            <li><a href="javascript:void(0)" onclick="openTab('Updates')"</a><h4 style="padding-bottom: 0.5em">Updates</h4>
-              <ul id="Updates" style="display:display; padding-left:0; list-style-type:none" class="tab">
+            <li class="active"><a href="#updates"</a><h4 style="padding-bottom: 0.5em">Updates</h4>
+              <ul id="updates" style="padding-left:0; list-style-type:none" class="post-content">
                 {% for post in posts %}
                   {% if post.category == "update" %}
                   <li>
@@ -30,8 +29,8 @@
             </li>
 
             <!-- Tutorial links -->
-            <li><a href="javascript:void(0)" onclick="openTab('Tutorials')"</a><h4 style="padding-bottom: 0.5em">Tutorials</h4>
-              <ul id="Tutorials" style="display:none; padding-left:0; list-style-type:none" class="tab">
+            <li><a href="#tutorials"</a><h4 style="padding-bottom: 0.5em">Tutorials</h4>
+              <ul id="tutorials" style="padding-left:0; list-style-type:none" class="post-content">
                 {% for post in posts %}
                   {% if post.category == "tutorial"%}
                   <li>
@@ -44,8 +43,8 @@
             </li>
 
             <!-- Post links -->
-            <li><a href="javascript:void(0)" onclick="openTab('Posts')"</a><h4 style="padding-bottom: 0.5em">Posts</h4>
-              <ul id="Posts" style="display:none; padding-left:0; list-style-type:none" class="tab">
+            <li><a href="#posts"</a><h4 style="padding-bottom: 0.5em">Posts</h4>
+              <ul id="posts" style="padding-left:0; list-style-type:none" class="post-content">
                 {% for post in posts %}
                   {% if post.category == "post"%}
                   <li>
@@ -60,13 +59,13 @@
         </aside>
 
         <!-- Article -->
-        <section>
+        <section style="padding-top: 2em">
           <!-- Thumbnail Article -->
           <img src="{{thumbnail}}" alt="image" style="width: 100%"/>
           <!-- Title Article -->
           <h2 class="text-center" style="border: none; padding: 0; margin-bottom: 0">{{ title }}</h2>
           <!-- Date Article -->
-          <div class="date-article center" style="color: #767676">Published on {{ date | date: "%u %b. %Y"}}</div>
+          <div class="date-article center">Published on {{ date | date: "%u %b. %Y"}}</div>
           <article style="block">
             <!-- Contents Article -->
             {{ content }}
