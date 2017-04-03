@@ -1,7 +1,5 @@
 // Toggles the side navigation when the window resizes or a button is pressed.
-$( "#toggle-menu" ).click(function() {
 
-});
 
 // Sets the selected menu item active.
 $(document).ready(function(){
@@ -12,6 +10,10 @@ $(document).ready(function(){
     $('.post-content').removeClass('show');
     $(activeTab).addClass('show');
   }
+
+  $( "header > i" ).click(function() {
+    console.log("toggle");
+  });
 
   $('.side-nav > ul > li > a').click(function(e) {
     e.preventDefault();

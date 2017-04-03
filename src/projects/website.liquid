@@ -26,7 +26,7 @@ route:   projects
 
   <div class="text-wrapper center">
     <div class="page-tag">
-      <div>HTML5 | CSS3 | Javascript | Jquery | Liquid</div>
+      <div>Technology used Cobalt, HTML5, CSS3, Javascript, Jquery</div>
     </div>
     <div class="intro text-center center">
       I created this website as a portfolio for all of my projects and a place were I can express myself about my passion for software and technologie.
@@ -52,10 +52,13 @@ route:   projects
 
     <h2>Changes</h2>
     {% for post in posts %}
-      <h4>
-        <a href="/{{post.path}}">{{post.title}}</a>
-
-      </h4>
+      {% for tag in post.tags %}
+      {% if tag == "website"%}
+          <h4>
+            <a href="/{{post.path}}">{{post.title}}</a>
+          </h4>
+        {% endif %}
+      {% endfor %}
     {% endfor %}
   </div>
 </main>

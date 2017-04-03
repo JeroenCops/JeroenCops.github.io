@@ -14,10 +14,6 @@ a:focus {
   color: #41916a;
 }
 
-.block-link {
-  display: block
-}
-
 /* Lists
 **************************************************************/
 
@@ -96,9 +92,10 @@ aside {
 section {
   float: right;
   width: 100%;
+  padding: 0 1em;
 }
 
-#toggle-menu {
+.toggle-menu {
   display: block;
   float: left;
   margin-left: 1em;
@@ -113,7 +110,7 @@ section {
   transition: color .3s;
 }
 
-#toggle-menu:hover {
+.toggle-menu:hover {
   color: #41916a;
 }
 
@@ -121,6 +118,7 @@ section {
   text-align: center;
   margin-top: 10px;
   padding-bottom: 1em;
+  color: #767676;
 }
 
 /* Pagination
@@ -148,7 +146,9 @@ main {
   width: 100%;
   height: 100%;
   min-height: 100%;
-  padding: 2em 2em;
+  padding-bottom: 2em;
+  padding-left: 1em;
+  padding-right: 1em;
   text-align: left;
   background-color: #fff;
   border-top: 1px solid #ddd;
@@ -223,9 +223,9 @@ main {
   margin: 0 0;
 }
 
-@media (max-width: 40em) {
+@media (max-width: 60em) {
   .thumbnail-crop {
-    width: 50%;
+    width: 33.33%;
   }
 }
 
@@ -359,6 +359,7 @@ main {
 
 .text-wrapper {
   max-width: 1024px;
+  margin-top: 2em;
   margin-bottom: 2em;
 }
 
@@ -401,7 +402,6 @@ main {
   font-size: 12px;
   font-weight: normal;
   color: #222;
-  vertical-align: middle;
   text-align: center;
 
   -webkit-transition: color .25s ease-out;
@@ -415,12 +415,14 @@ main {
 .projecthead-nav > li > a:focus {
   background-color: transparent;
   color: #41916a;
+  border-top: 2px solid #41916a;
 }
 
 .projecthead-nav > .active > a,
 .projecthead-nav > .active > a:hover,
 .projecthead-nav > .active > a:focus {
   color: #41916a;
+  border-top: 2px solid #41916a;
 }
 
 .tab-content {
@@ -491,6 +493,8 @@ main {
 **************************************************************/
 
 .col {
+  margin-top: 1em;
+  margin-bottom: 1em;
   padding-left: 15px;
   padding-right: 15px;
   float: left;
@@ -500,6 +504,14 @@ main {
   width: 33.33%;
   height: 200px;
   color: #fff;
+}
+
+.bottom {
+  position: absolute;
+  left: 50%;
+  bottom: -15px;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
 }
 
 .col > a {
@@ -541,7 +553,7 @@ main {
   position: relative;
   width: 100%;
   font-size: small;
-  background-color: #41916a;
+  background-color: #fff;
   height: 8em;
   overflow: hidden;
 }
@@ -570,8 +582,9 @@ main {
 **************************************************************/
 
 .cobalt-logo {
-  padding-bottom: 12px;
-  height: 34px;
+  margin-bottom: 13px;
+  height: 28px;
+  background-color: #222;
 }
 
 .footer-list {
@@ -602,6 +615,10 @@ main {
   .masthead-nav > li {
     width: 4em;
   }
+
+  .projecthead-nav > li {
+    width: 4em;
+  }
 }
 
 @media (min-width: 768px) {
@@ -609,10 +626,6 @@ main {
   .masthead {
     position: relative;
     top: 0;
-  }
-
-  main {
-    padding: 2em 2em;
   }
 
   /* Handle the widths */
@@ -632,7 +645,7 @@ main {
     margin: 0 1.5%;
   }
 
-  #toggle-menu {
+  .toggle-menu {
     display: none;
   }
 }

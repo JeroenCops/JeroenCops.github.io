@@ -2,7 +2,7 @@
 $(document).ready(function(){
   $('.page-nav a').click(function(e) {
     e.preventDefault();
-
+    
     $('.tab-content').removeClass('show');
 		$('.page-nav li').removeClass('active');
 

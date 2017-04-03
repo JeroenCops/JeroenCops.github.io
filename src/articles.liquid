@@ -34,7 +34,7 @@ route:   articles
           {% if post.category == "update"%}
           <div class="thumbnail-crop">
             <div class="thumbnail-inner-row">
-              <a href="/{{post.path}}">
+              <a data-post="update" href="/{{post.path}}">
                 <img src="{{post.thumbnail}}" alt="image"/>
               </a>
             </div>
@@ -65,7 +65,7 @@ route:   articles
           {% if post.category == "tutorial"%}
           <div class="thumbnail-crop">
             <div class="thumbnail-inner-row">
-              <a href="/{{post.path}}">
+              <a data-post="tutorial" href="/{{post.path}}">
                 <img src="{{post.thumbnail}}" alt="image"/>
               </a>
             </div>
@@ -96,7 +96,7 @@ route:   articles
           {% if post.category == "post"%}
           <div class="thumbnail-crop">
             <div class="thumbnail-inner-row">
-              <a href="/{{post.path}}">
+              <a data-post="post" href="/{{post.path}}">
                 <img src="{{post.thumbnail}}" alt="image"/>
               </a>
             </div>
