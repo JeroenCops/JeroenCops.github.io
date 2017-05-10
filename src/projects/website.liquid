@@ -2,7 +2,6 @@ extends: default.liquid
 
 title:   Website
 path:    projects/website/
-route:   projects
 ---
 
 <!-- Project header -->
@@ -24,41 +23,38 @@ route:   projects
     </nav>
   </header>
 
-  <div class="text-wrapper center">
-    <div class="page-tag">
-      <div>Technology used Cobalt, HTML5, CSS3, Javascript, Jquery</div>
+  <div class="text-wrapper width-1026 center" style="background-color: #fff; margin-top: 4em">
+    <div class="text-block width-750 center">
+      <div class="page-tag">Technologies used Cobalt, HTML5, CSS3, Javascript, Jquery</div>
     </div>
-    <div class="intro text-center center">
+    <div class="text-block width-750 center" style="font-size:18px;">
       I created this website as a portfolio for all of my projects and a place were I can express myself about my passion for software and technologie.
     </div>
-
-    <h2>Cobalt</h2>
-    <div class="project-text-block">
-      <img class="thumbnail-project" src="/assets/cobalt_logo.png" alt="image"/>
+    <div class="text-block width-750 center">
+      <h2 style="margin-top: 0">Cobalt</h2>
+      <img class="project-img-50" src="/assets/cobalt_logo.png" alt="image"/>
       This website was generated with Cobalt, which is a static website generator similar to
       Jekyll. Cobalt is written in Rust, so it Cobalt can turn the Liquid templates, MarkDown files almost instantly into HTML.
       Because it's static makes it also easy to deploy anywhere, you don't have to mess with SQL and php, I just can focus on the content.
     </div>
-
-    <h2>Liquid</h2>
-    <div class="project-text-block">
+    <div class="text-block width-750 center">
+    <h2 style="margin-top: 0">Liquid</h2>
       Liquid is an open-source template language crated by Shopify.
     </div>
-
-    <h2>Github Pages</h2>
-    <div class="project-text-block">
-      Github Pages is were I host this site freely on.
+    <div class="text-block width-750 center">
+    <h2 style="margin-top: 0">Github Pages</h2>
+      GitHub Pages hosts the website directly from this repository. It's also free and very easy to use. Just push to the repo, you want your website hosted from.
     </div>
-
-    <h2>Changes</h2>
-    {% for post in posts %}
-      {% for tag in post.tags %}
-      {% if tag == "website"%}
-          <h4>
-            <a href="/{{post.path}}">{{post.title}}</a>
-          </h4>
+    <div class="text-block width-750 center">
+      <h2 style="margin-top: 0">Changelog</h2>
+      {% for post in posts %}
+        {% if post.subcategory == "website" %}
+            <h4>
+              <span style="display:inline-block; width: 150px">{{post.date | date: "%e %b. %Y"}}</span>
+              <a href="/{{post.path}}">{{post.title}}</a>
+            </h4>
         {% endif %}
       {% endfor %}
-    {% endfor %}
+    </div>
   </div>
 </main>

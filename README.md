@@ -5,7 +5,7 @@
 <h1 align="center">Jeroen Cops</h1>
 
 <div align="center">
-This is the repository for the source code of my personal website, the source branch contains the source code and the master branch is where the website is hosted from. The technologie that this website uses, is listed below this paragraph.
+This is the repository for the source code of my personal website, the source branch contains the source code and the master branch is where the website is hosted from. The technologies that this website uses, is listed below this paragraph.
 </div>
 
 ### Cobalt
@@ -18,7 +18,7 @@ Cobalt is a static site generator. It's turns plain text into a static website.
 
 * **Simple** - You don't need to mess with databases, comment moderation.
 
-*Find more information on their [website](http://cobalt-org.github.io/) or check out their repository [Cobalt.rs](https://github.com/cobalt-org/cobalt.rs).*
+*Find more information on their repository page [Cobalt.rs](https://github.com/cobalt-org/cobalt.rs).*
 
 ___
 
@@ -42,9 +42,9 @@ ___
 
 **Copyright 2017 Jeroen Cops**
 
-All content on this site, unless otherwise noted, is licensed as follows:
+All content for this site, unless otherwise noted, is licensed as follows:
 
-* All the source code published on this website an the website source code itself is covered by the [MIT License](https://github.com/JeroenCops/JeroenCops.github.io/blob/source/LICENSE-MIT).
-* Other content, including articles, tutorials, and images, is released under the [Creative Commons Attribution-ShareAlike 4.0 license](https://github.com/JeroenCops/JeroenCops.github.io/blob/source/LICENSE-CCBYSA.md).
+* All the source code published to this repository is covered by the [MIT License](https://github.com/JeroenCops/JeroenCops.github.io/blob/source/LICENSE-MIT).
+* Other content, including articles, tutorials, videos, and images, is released under the [Creative Commons Attribution-ShareAlike 4.0 license](https://github.com/JeroenCops/JeroenCops.github.io/blob/source/LICENSE-CCBYSA.md).
 
 ___

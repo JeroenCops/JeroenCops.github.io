@@ -1,20 +1,20 @@
 <div class="site-wrapper">
     <!-- header -->
     <div class="masthead clearfix">
-      <div class="inner">
-        <a href="/">
-          <h3 class="masthead-brand"><img src="/assets/jeroen_cops.png">Jeroen Cops</h3>
-        </a>
+      <a href="/">
+        <h3 class="masthead-brand"><img src="/assets/jeroen_cops.png">Jeroen Cops</h3>
+      </a>
         <!-- Site navigation -->
-        <nav>
-          <ul class="nav masthead-nav">
-            <li id="home" class="{%if route == "home"%}active{%endif%}"><a href="/">Home</a></li>
-            <li id="articles" class="{%if route == "articles"%}active{%endif%}"><a href="/articles/">Articles</a></li>
-            <li id="projects" class="{%if route == "projects"%}active{%endif%}"><a href="/projects/">Projects</a></li>
-            <li id="about" class="{%if route == "about"%}active{%endif%}"><a href="/about/">About</a></li>
-          </ul>
-        </nav>
-      </div>
+      <nav>
+        <ul class="masthead-nav">
+          <li id="home" class="{%if route == "home"%}active{%endif%}"><a href="/">Home</a></li>
+          {% for post in posts limit:1 %}
+            <li id="articles" class="{%if route == "articles"%}active{%endif%}"><a data-article=".{{ post.subcategory }}" href="/{{ post.path }}">Articles</a></li>
+          {% endfor %}
+          <li id="projects" class="{%if route == "projects"%}active{%endif%}"><a href="/projects/">Projects</a></li>
+          <li id="about" class="{%if route == "about"%}active{%endif%}"><a href="/about/">About</a></li>
+        </ul>
+      </nav>
     </div>
 
   {% if is_post %}

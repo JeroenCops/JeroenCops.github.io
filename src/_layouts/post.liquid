@@ -1,85 +1,83 @@
 <!DOCTYPE html>
 <html>
-  <body data-route={{route}}>
-
+  <body>
     <!-- Page header -->
     <header class="page-header">
-      <i class="fa fa-bars toggle-menu" aria-hidden="true"></i>
-      <h1>{{category | capitalize }}s</h1>
+      <h1>Articles</h1>
     </header>
 
     <main>
-      <div class="text-wrapper center clearfix">
+      <div class="text-wrapper width-1026 center clearfix">
         <!-- Side Navigation -->
-        <aside class="sidenav side-nav">
+        <aside class="sidenav side-nav" style="border: 1px solid #eee">
           <!-- Article links -->
-          <ul style="list-style-type:none">
-            <!-- Update links -->
-            <li class="active"><a href="#updates"</a><h4 style="padding-bottom: 0.5em">Updates</h4>
-              <ul id="updates" style="padding-left:0; list-style-type:none" class="post-content">
-                {% for post in posts %}
-                  {% if post.category == "update" %}
-                  <li>
-                    <h5><a href="/{{post.path}}">{{post.title}}</a></h5>
-                  </li>
-                  {% endif %}
-                {% endfor %}
-              </ul>
-              <hr>
-            </li>
+          <ul style="padding-left:0; list-style-type:none">
+            {% assign categories = "updates" | split: "|" %}
+            {% assign sub_Array = "website|book|gfx|test|sintel" | split: "|" %}
 
-            <!-- Tutorial links -->
-            <li><a href="#tutorials"</a><h4 style="padding-bottom: 0.5em">Tutorials</h4>
-              <ul id="tutorials" style="padding-left:0; list-style-type:none" class="post-content">
-                {% for post in posts %}
-                  {% if post.category == "tutorial"%}
-                  <li>
-                    <h5><a href="/{{post.path}}">{{post.title}}</a></h5>
-                  </li>
-                  {% endif %}
-                {% endfor %}
+            <!-- Category links -->
+            {% for category in categories %}
+            {% assign temp = '' %}
+            <li><h4>{{ category | capitalize }}</h4>
+              <ul style="padding-left:1em; list-style-type:none">
+                {% for sub in sub_Array %}
+                  {% for post in posts %}
+                    {% if post.category == category %}
+                      {% if post.subcategory == sub %}
+                        {% if temp != sub %}
+                        <li><h5><a href=".{{ sub }}" style="color: #767676">{{ sub | capitalize }}</a></h5>
+                        {% endif %}
+                        {% assign temp = sub %}
+                        <ul style="padding-left:1em; list-style-type:none">
+                          <li class="{{ sub }} post-content"><h6><a href="/{{ post.path }}">{{ post.title }}</a></h6></li>
+                        </ul>
+                      {% elsif post.subcategory == '' %}
+                        <li><h5><a href=".{{ post.date | date: "%B-%Y" }}" style="color: #222">{{ post.date | date: "%B %Y" }}</a></h5>
+                        <ul style="padding-left:1em; list-style-type:none">
+                          <li class="{{ post.date | date: "%B-%Y" }} post-content"><h6><a href="/{{ post.path }}">{{ post.title }}</a></h6></li>
+                        </ul>
+                       {% endif %}
+                    {% endif %}
+                  {% endfor %}
+                 {% endfor %}
               </ul>
               <hr>
             </li>
-
-            <!-- Post links -->
-            <li><a href="#posts"</a><h4 style="padding-bottom: 0.5em">Posts</h4>
-              <ul id="posts" style="padding-left:0; list-style-type:none" class="post-content">
-                {% for post in posts %}
-                  {% if post.category == "post"%}
-                  <li>
-                    <h5><a href="/{{post.path}}">{{post.title}}</a></h5>
-                  </li>
-                  {% endif %}
-                {% endfor %}
-              </ul>
-              <hr>
-            </li>
+            {% endfor %}
           </ul>
         </aside>
-
         <!-- Article -->
-        <section>
+        <section style="border: 1px solid #eee">
           <!-- Thumbnail Article -->
-          <img src="{{thumbnail}}" alt="image" style="width: 100%"/>
+          {% if category != 'videos' %}
+            <div class="thumbnail-article-page">
+              <img id="article-thumbnail" src="{{ thumbnail }}" alt="image"/>
+            </div>
+          {% else %}
+            <iframe width="100%" height="386px"
+              src=" https://www.youtube.com/embed/{{ video }}?autohide=1&modestbranding=1&showinfo=0&wmode=transparent&rel=0&fs=0" frameborder="0">
+            </iframe>
+          {% endif %}
           <!-- Title Article -->
           <h2 class="text-center" style="border: none; padding: 0; margin-bottom: 0">{{ title }}</h2>
           <!-- Date Article -->
-          <div class="date-article center">Published on {{ date | date: "%u %b. %Y"}}</div>
+          <div class="date-article center">Published on {{ date | date: "%e %b. %Y"}}</div>
+          <hr>
           <article style="block">
             <!-- Contents Article -->
             {{ content }}
-
             <!-- Previous Article -->
+            <!--
             <div class="previous">
               <a href=""><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Previous</a>
             </div>
-
+            -->
             <!-- Next Article -->
+            <!--
             <div class="next">
               <a href="">Next <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
             </div>
-
+            -->
           </article>
         </section>
       </div>

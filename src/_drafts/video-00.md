@@ -1,13 +1,15 @@
 extends: default.liquid
 
-title: "Initial release"
-date: 16 April 2017 21:04:00 +0100
-path: articles/:category/:subcategory/:year/:month/inital-release.html
+title: Test4
+date: 05 Mar 2017 21:00:00 +0100
+path: articles/:category/:subcategory/:year/:month/test4.html
 route: articles
-description: "The Website is finally online, but it still has some issues that need to be resolved."
-thumbnail: /images/website_thumbnail.png
-category: updates
-subcategory: website
+description: Website is finally online, but it still has some issues that need to be resolved.
+thumbnail: https://i1.ytimg.com/vi/dbr1M2Cx2LY/maxresdefault.jpg
+video: dbr1M2Cx2LY
+category: videos
+subcategory: test
+tags: [youtube, test, video]
 ---
 
 ### Release

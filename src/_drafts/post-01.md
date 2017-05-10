@@ -1,12 +1,13 @@
 extends: default.liquid
 
-title: Lorem Ipsum
-date: 05 Mar 2017 21:00:00 +0100
-path: articles/tutorials/:year/:month
+title: "Rust and Games"
+date: 01 March 2017 21:00:00 +0100
+path: articles/:category/:year/:month/:day/
 route: articles
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-thumbnail: /assets/gfx_logo.png
-category: tutorial
+description: "Is rust a great language for game development?"
+thumbnail: /assets/Cargo-Logo.png
+category: posts
+subcategory: ""
 tags: [lorem, ipsum]
 ---
 

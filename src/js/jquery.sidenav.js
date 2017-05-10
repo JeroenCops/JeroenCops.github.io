@@ -15,13 +15,13 @@ $(document).ready(function(){
     console.log("toggle");
   });
 
-  $('.side-nav > ul > li > a').click(function(e) {
+  $('.side-nav > ul > li > ul > li > h5 > a').click(function(e) {
     e.preventDefault();
     sessionStorage.setItem('activeTab', $(this).attr('href'));
     activeTab = sessionStorage.getItem('activeTab');
 
     $('.post-content').removeClass('show');
-		$('.side-nav > ul > li').removeClass('active');
+		$('.side-nav > ul > li > ul > li').removeClass('active');
 
     $(activeTab).addClass('show');
     $(this).parents('li').addClass('active');

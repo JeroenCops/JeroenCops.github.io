@@ -1,12 +1,13 @@
 extends: default.liquid
 
 title: Lorem Ipsum
-date: 05 Mar 2017 21:00:00 +0100
-path: articles/posts/:year/:month
+date: 05 March 2017 21:00:00 +0100
+path: articles/:category/:year/:month/:day
 route: articles
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-thumbnail:
-category: post
+thumbnail: /assets/Cargo-Logo.png
+category: posts
+subcategory: ""
 tags: [lorem, ipsum]
 ---
 

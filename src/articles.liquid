@@ -23,27 +23,28 @@ route:   articles
     </nav>
   </div>
 
-  <div class="text-wrapper center">
-    <article id="updates" class="tab-content show">
+  <div class="text-wrapper width-1026 center">
+    {% assign testArray = "updates|tutorials|posts" | split: "|" %}
+    {% for test in testArray %}
+    <article id="{{ test }}" class="tab-content show">
       <!-- Heading thumbnails -->
-      <h2 style="padding-left: 15px; margin-bottom: 1em">Updates</h2>
-
+      <h2 style="padding-left: 15px; margin-bottom: 1em">{{ test | capitalize }}</h2>
       <!-- Thumbnails  -->
-      <div class="thumbnail-container clearfix">
+      <div class="clearfix">
         {% for post in posts %}
-          {% if post.category == "update"%}
+          {% if post.category == test %}
           <div class="thumbnail-crop">
-            <div class="thumbnail-inner-row">
-              <a data-post="update" href="/{{post.path}}">
-                <img src="{{post.thumbnail}}" alt="image"/>
-              </a>
-            </div>
+            <a data-article="#{{ post.category }}" href="/{{ post.path }}">
+              <div class="thumbnail-article">
+                <img src="{{ post.thumbnail }}" alt="image"/>
+              </div>
+            </a>
             <h4>
-              <a href="/{{post.path}}">{{post.title}}</a>
+              <a data-article="#{{ post.category }}" href="/{{ post.path }}">{{ post.title }}</a>
             </h4>
-            <p style="font-size: 12px; margin-bottom: 0.2em; color: #767676">
+            <p class="text-label">
               Published on
-              {{post.date | date: "%u %b. %Y"}}
+              {{ post.date | date: "%e %b. %Y" }}
             </p>
             <p style="font-size: 14px">
               {{ post.description }}
@@ -54,67 +55,6 @@ route:   articles
       </div>
       <hr>
     </article>
-
-    <article id="tutorials" class="tab-content show">
-      <!-- Heading thumbnails -->
-      <h2 style="padding-left: 15px; margin-bottom: 1em">Tutorials</h2>
-
-      <!-- Thumbnails -->
-      <div class="thumbnail-container clearfix">
-        {% for post in posts %}
-          {% if post.category == "tutorial"%}
-          <div class="thumbnail-crop">
-            <div class="thumbnail-inner-row">
-              <a data-post="tutorial" href="/{{post.path}}">
-                <img src="{{post.thumbnail}}" alt="image"/>
-              </a>
-            </div>
-            <h4>
-              <a href="/{{post.path}}">{{post.title}}</a>
-            </h4>
-            <p style="font-size: 12px; margin-bottom: 0.2em; color: #767676">
-              Published on
-              {{post.date | date: "%u %b. %Y"}}
-            </p>
-            <p style="font-size: 14px">
-              {{ post.description }}
-            </p>
-          </div>
-          {% endif %}
-        {% endfor %}
-      </div>
-      <hr>
-    </article>
-
-    <article id="posts" class="tab-content show">
-      <!-- Heading thumbnails -->
-      <h2 style="padding-left: 15px; margin-bottom: 1em">Posts</h2>
-
-      <!-- Thumbnails -->
-      <div class="thumbnail-container clearfix">
-        {% for post in posts %}
-          {% if post.category == "post"%}
-          <div class="thumbnail-crop">
-            <div class="thumbnail-inner-row">
-              <a data-post="post" href="/{{post.path}}">
-                <img src="{{post.thumbnail}}" alt="image"/>
-              </a>
-            </div>
-            <h4>
-              <a href="/{{post.path}}">{{post.title}}</a>
-            </h4>
-            <p style="font-size: 12px; margin-bottom: 0.2em; color: #767676">
-              Published on
-              {{post.date | date: "%u %b. %Y"}}
-            </p>
-            <p style="font-size: 14px">
-              {{ post.description }}
-            </p>
-          </div>
-          {% endif %}
-        {% endfor %}
-      </div>
-      <hr>
-    </article>
+    {% endfor %}
   </div>
 </main>

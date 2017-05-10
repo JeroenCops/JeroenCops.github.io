@@ -1,18 +1,19 @@
 extends: default.liquid
 
-title: "Initial release"
-date: 16 April 2017 21:04:00 +0100
-path: articles/:category/:subcategory/:year/:month/inital-release.html
+title: Initial Release
+date: 07 May 2017 17:15:00 +0100
+path: articles/:category/:subcategory/:year/:month/initial-release.html
 route: articles
-description: "The Website is finally online, but it still has some issues that need to be resolved."
-thumbnail: /images/website_thumbnail.png
+description: Sintel is a 2D runtime game engine written in Rust.
+thumbnail: /images/sintel_thumbnail.png
 category: updates
-subcategory: website
+subcategory: sintel
+tags: [sintel, engine, release]
 ---
 
 ### Release
 
-The website is finally online. Now let's hunt for bugs!
+The roadmap needs to be added to the project page of the sintel project.
 
 ### New Issues
 

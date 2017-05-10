@@ -2,13 +2,12 @@ extends: default.liquid
 
 title:   Rust book
 path:    projects/rustbook/
-route:   projects
 ---
 
 <!-- Page-header -->
 <div class="project-cover">
   <header class="project-header">
-    <img class="thumbnail-project" src="/assets/rust_logo.png" alt="image"/>
+    <img class="thumbnail-project" src="/assets/rust_logo.svg" alt="image"/>
     <h1>The Rust book</h1>
   </header>
 </div>
@@ -18,40 +17,55 @@ route:   projects
     <header class="projecthead" style="text-align: center">
       <nav>
         <ul class="nav projecthead-nav">
-          <li><a href="/projects/rust_book/index.html">Read</a></li>
-          <li><a href="https://github.com/JeroenCops/LearningRust">Source</a></li>
+          <li><a href="https://jeroencops.github.io/rust_boek/">Read</a></li>
+          <li><a href="https://github.com/JeroenCops/rust_boek">Source</a></li>
         </ul>
       </nav>
     </header>
 
-  <div class="text-wrapper center">
-    <div class="intro center">
-    <div class="page-tag">
-      <div>Technology used mdbook</div>
+  <div class="text-wrapper width-1026 center" style="background-color: #fff; margin-top: 4em">
+    <div class="text-block width-750 center">
+      <div class="page-tag">Technologies used mdbook</div>
+    </div>
+    <div class="text-block width-750 center" style="font-size:18px;">
+      I started writing this book, because I wanted to learn Rust and also help the community in some way. So I translated the Rust book to Dutch.
+      The book is generated with mdbook.
+    </div>
+    <div class="text-wrapper width-1026 center clearfix">
+      <div class="thumbnail-project-page" style="float:left">
+        <img src="/images/Cargo-Logo.png" alt="image"/>
+      </div>
+      <div class="text-block width-50perc" style="float: left; height: 288.56px">
+        <div style="margin-bottom: 0.5em;">
+        <h2 style="margin-top: 0">Cargo</h2>
+        Cargo is a tool that Rustaceans use to help manage their Rust projects. Cargo manages three things: building our code,
+        downloading the dependencies our code needs, and building those dependencies.
+        </div>
+        <a href="http://doc.crates.io/guide.html"/>Read Guide</a>
+      </div>
+      <div class="text-block width-50perc" style="float: left; height: 288.56px">
+        <h2 style="margin-top: 0">Crates.io</h2>
+        Cargo is a tool that Rustaceans use to help manage their Rust projects. Cargo manages three things: building our code,
+        downloading the dependencies our code needs, and building those dependencies.
+      </div>
+      <div class="thumbnail-project-page" style="float:left">
+        <img src="/images/rust_project.png" alt="image"/>
+      </div>
+    </div>
+    <div class="text-block width-750 center">
+      <h2>Tools</h2>
+      There are all sort of plugins avialable for different text editors.
+    </div>
+    <div class="text-block width-750 center">
+      <h2 style="margin-top: 0">Changelog</h2>
+        {% for post in posts %}
+          {% if post.subcategory == "book"%}
+            <h4>
+              <span style="display:inline-block; width: 150px">{{post.date | date: "%e %b. %Y"}}</span>
+              <a href="/{{post.path}}">{{post.title}}</a>
+            </h4>
+          {% endif %}
+        {% endfor %}
     </div>
   </div>
-  <div class="intro text-center center">
-    I started writing this book, because I wanted to learn Rust and also help the community in some way. So I translated the Rust book to Dutch.
-    The book is generated with mdbook.
-  </div>
-  <div class="intro text-center center">
-  <h2>Cargo</h2>
-  <div class="project-text-block">
-    Cargo is a tool that Rustaceans use to help manage their Rust projects. Cargo manages three things: building our code,
-    downloading the dependencies our code needs, and building those dependencies.
-  </div>
-  </div>
-  <img class="project-img" src="/assets/Cargo_CLI.PNG" alt="image"/>
-  <div class="intro center">
-  <h2>Crates.io</h2>
-  <div class="project-text-block">
-    Crates.io is the place were we publish our rust crates to.
-    <img class="thumbnail-project" src="/assets/Cargo-Logo.png" alt="image"/>
-  </div>
-  <h2>Tools</h2>
-  <div class="project-text-block">
-    There are all sort of plugins avialable for different text editors.
-  </div>
-</div>
-</div>
 </main>

@@ -9,11 +9,14 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.1"
    id="svg2"
-   viewBox="0 0 62 84"
-   height="84"
-   width="62"
+   viewBox="0 0 21 28"
+   height="28"
+   width="21"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="Cobalt_logo.svg">
+   sodipodi:docname="Cobalt_logo.svg"
+   inkscape:export-filename="D:\Images\MyWork\cobal_logo.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -27,14 +30,16 @@
      inkscape:window-height="1017"
      id="namedview12"
      showgrid="false"
-     inkscape:zoom="6.675088"
-     inkscape:cx="23.705154"
-     inkscape:cy="59.684624"
+     inkscape:zoom="22.627417"
+     inkscape:cx="22.773345"
+     inkscape:cy="16.573885"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg2"
-     inkscape:snap-page="true" />
+     inkscape:snap-page="true"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-nodes="true" />
   <defs
      id="defs4" />
   <metadata
@@ -49,9 +54,16 @@
       </cc:Work>
     </rdf:RDF>
   </metadata>
-  <path
-     style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:4.80460024;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-     d="m -0.0060911,0 0,22.759766 15.8045061,-13.7089848 0,13.4296878 L -0.0060911,36 l 0,48 62.0529661,0 0,-10.464844 -16.103589,0 0,-12.90625 16.103589,12.904297 0,-64.361328 -16.042991,13.265625 -29.042367,0 0,-13.2890625 45.085358,0 0,-9.1484375 -62.0529661,0 z m 15.9413411,24.074219 0,35.435547 -15.92570275,13.314453 0,-35.419922 L 15.93525,24.074219 Z m 0.604031,36.515625 28.364055,0 -0.130972,12.945312 -43.7971487,0 15.5640657,-12.945312 z"
-     id="rect4147"
-     inkscape:connector-curvature="0" />
+  <g
+     id="g4714"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90"
+     transform="matrix(0.33938325,0,0,0.33938325,-31.414495,-85.271588)">
+    <path
+       sodipodi:nodetypes="cccccccccccccccccccccccc"
+       inkscape:connector-curvature="0"
+       id="rect4702"
+       d="m 108.3623,260.25781 -15.79882,13.70313 0,13.24023 15.79882,-13.51367 z m 30.20508,13.38677 15.86914,-13.29884 -44.91015,-0.084 0,13.28907 29.04101,0.0937 m -30.06836,1.63671 -15.92578,13.33008 0,35.41992 15.92578,-13.31445 z m 0.60352,36.51563 -15.5625,12.94531 43.79687,0 0.13086,-12.94532 z m 29.4043,0.0391 0,12.90625 15.93359,0.0117 z"
+       style="opacity:1;fill:#222222;fill-opacity:1;stroke:none;stroke-width:5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+  </g>
 </svg>
