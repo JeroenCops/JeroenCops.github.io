@@ -68,16 +68,20 @@
             {{ content }}
             <!-- Previous Article -->
             <!--
+            {% if previous %}
             <div class="previous">
-              <a href=""><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Previous</a>
+              <a href="{{ /previous.path }}"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Previous</a>
             </div>
+            {% endif %}
             -->
             <!-- Next Article -->
             <!--
+            {% if next %}
             <div class="next">
-              <a href="">Next <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+              <a href="{{ /next.path }}">Next <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
             </div>
-            -->
+            {% endif %}
+          -->
           </article>
         </section>
       </div>

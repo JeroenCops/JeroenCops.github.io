@@ -62,7 +62,7 @@ path:    projects/rustbook/
           {% if post.subcategory == "book"%}
             <h4>
               <span style="display:inline-block; width: 150px">{{post.date | date: "%e %b. %Y"}}</span>
-              <a href="/{{post.path}}">{{post.title}}</a>
+              <a data-article=".{{ post.subcategory }}" href="/{{post.path}}">{{post.title}}</a>
             </h4>
           {% endif %}
         {% endfor %}

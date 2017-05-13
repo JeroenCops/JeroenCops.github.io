@@ -11,36 +11,19 @@ route:   articles
 </header>
 
 <main>
-  <!-- Tabs Navigation -->
-  <div class="projecthead">
-    <nav class="page-nav">
-      <ul class="nav projecthead-nav" style="text-align: center">
-        <li class="active"><a href=".tab-content">All</a></li>
-        <li><a href="#updates">Updates</a></li>
-        <li><a href="#tutorials">Tutorials</a></li>
-        <li><a href="#posts">Posts</a></li>
-      </ul>
-    </nav>
-  </div>
-
   <div class="text-wrapper width-1026 center">
-    {% assign testArray = "updates|tutorials|posts" | split: "|" %}
-    {% for test in testArray %}
-    <article id="{{ test }}" class="tab-content show">
-      <!-- Heading thumbnails -->
-      <h2 style="padding-left: 15px; margin-bottom: 1em">{{ test | capitalize }}</h2>
+    <article class="tab-content show">
       <!-- Thumbnails  -->
       <div class="clearfix">
-        {% for post in posts %}
-          {% if post.category == test %}
+        {% for post in posts limit:16 %}
           <div class="thumbnail-crop">
-            <a data-article="#{{ post.category }}" href="/{{ post.path }}">
+            <a data-article=".{{ post.subcategory }}" href="/{{ post.path }}">
               <div class="thumbnail-article">
                 <img src="{{ post.thumbnail }}" alt="image"/>
               </div>
             </a>
             <h4>
-              <a data-article="#{{ post.category }}" href="/{{ post.path }}">{{ post.title }}</a>
+              <a data-article=".{{ post.subcategory }}" href="/{{ post.path }}">{{ post.title }}</a>
             </h4>
             <p class="text-label">
               Published on
@@ -49,12 +32,10 @@ route:   articles
             <p style="font-size: 14px">
               {{ post.description }}
             </p>
+            <div class="bottom-gradient"></div>
           </div>
-          {% endif %}
         {% endfor %}
       </div>
-      <hr>
     </article>
-    {% endfor %}
   </div>
 </main>
