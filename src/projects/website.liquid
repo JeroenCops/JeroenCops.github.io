@@ -48,11 +48,12 @@ path:    projects/website/
     <div class="text-block width-750 center">
       <h2 style="margin-top: 0">Changelog</h2>
       {% for post in posts %}
-        {% if post.subcategory == "website" %}
-            <h4>
-              <span style="display:inline-block; width: 150px">{{post.date | date: "%e %b. %Y"}}</span>
-              <a data-article=".{{ post.subcategory }} "href="/{{post.path}}">{{post.title}}</a>
-            </h4>
+        {% if post.category == "website" %}
+          <h5 class="get-category">
+            <span style="display:inline-block; width: 100px">{{post.date | date: "%e %b. %Y"}}</span>
+            <a data-article=".{{ post.category }}" href="/{{post.path}}" style="display:inline-block; width: 150px">{{post.title}}</a>
+            <span style="display: inline-block; width: 450px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">{{ post.description }}</span>
+          </h5>
         {% endif %}
       {% endfor %}
     </div>

@@ -15,7 +15,7 @@ $(document).ready(function(){
     console.log("toggle");
   });
 
-  $('.side-nav > ul > li > ul > li > h5 > a').click(function(e) {
+  $('.side-nav > ul > li > h4 > a').click(function(e) {
     e.preventDefault();
     sessionStorage.setItem('activeTab', $(this).attr('href'));
     activeTab = sessionStorage.getItem('activeTab');

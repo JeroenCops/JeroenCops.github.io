@@ -1,6 +1,3 @@
-/* Globals
-**************************************************************/
-
 /* Links
 **************************************************************/
 
@@ -27,8 +24,7 @@ li {
 
 html,
 body {
-  font-family: 'Rubik', sans-serif;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', 'Rubik', sans-serif;
   height: 100%;
   background-color: #fff;
   color: #222;
@@ -39,7 +35,7 @@ body {
 #gradient
 {
   width: 100%;
-  height: 800px;
+  height: 100%;
   padding: 0px;
   margin: 0px;
   position: fixed;
@@ -80,7 +76,6 @@ aside {
 section {
   float: right;
   width: 100%;
-  padding: 1em 1em;
   background: #fff;
 }
 
@@ -138,7 +133,7 @@ main {
   padding-left: 1em;
   padding-right: 1em;
   text-align: left;
-  background-color: #f1f1f1;
+  background-color: #fff;
   border-top: 1px solid #ddd;
 }
 
@@ -282,6 +277,7 @@ main {
 .page-header > h1 {
   margin: 53px auto 0 auto;
   padding: 0.5em 0;
+  color: #222;
 }
 
 .page-text-block {
@@ -331,23 +327,21 @@ main {
   left: 50%;
   margin: 0 -208.5px;
   overflow: hidden;
-  padding: 12.5px;
+  padding: 10px;
   list-style: none;
 }
 
 .masthead-nav > li {
-  float: left;
   display: inline-block;
   margin: 0;
-  width: 7em;
-  height: 25px;
+  height: 30px;
+  vertical-align: top;
 }
 
 .masthead-nav > li > a {
   text-decoration: none;
   outline: none;
-  padding-right: 0;
-  padding-left: 0;
+  padding: 15px;
   font-size: 13px;
   font-weight: normal;
   color: #222; /* IE8 proofing */
@@ -416,6 +410,13 @@ main {
   margin-right: auto;
   float: none;
   display: block;
+}
+
+.center-vertical {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 400px;
 }
 
 .text-center {
@@ -522,13 +523,18 @@ main {
   text-align: center;
 }
 
+.cover-heading {
+  margin-top: 0;
+}
+
 /* button
 **************************************************************/
 
 .button {
   border: 2px solid;
   border-color: #222;
-  color: #222;
+  border-radius: 4px;
+  background-color: #222;
   font-size: 18px;
   width: 100px;
   margin: auto;
@@ -543,7 +549,7 @@ main {
 .button > a {
     display:inline-table;
     cursor: pointer;
-    color: #222;
+    color: #fff;
     text-decoration: none;
     height: 100%;
     width:100%;
@@ -558,14 +564,15 @@ main {
 
 .button:hover {
   border: 2px solid;
-  border-color: #666;
-  color: #666;
+  border-color: #333;
+  border-radius: 4px;
+  background-color: #333;
   width: 100px;
   margin: auto;
-}
+}  
 
 .button:hover > a {
-  color: #666;
+  color: #ccc;
 }
 
 /* Footer
@@ -686,6 +693,6 @@ main {
 
 @media (min-width: 1064px) {
   .masthead-nav > li > a {
-    font-size: 15px;
+    font-size: 14px;
   }
 }

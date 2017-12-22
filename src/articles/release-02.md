@@ -2,12 +2,12 @@ extends: default.liquid
 
 title: "Categories"
 date: 29 April 2017 17:49:00 +0100
-path: articles/:category/:subcategory/:year/:month/categories.html
+path: articles/:category/categories.html
 route: articles
-description: A major release, a whole new look and easier to navigate the site.
+description: A major release, a whole new look and easier way to navigate the site.
 thumbnail: /images/website_thumbnail.png
-category: updates
-subcategory: website
+category: website
+videos: false
 ---
 
 ### Release

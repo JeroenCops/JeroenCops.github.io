@@ -2,12 +2,12 @@ extends: default.liquid
 
 title: "Initial release"
 date: 16 April 2017 21:04:00 +0100
-path: articles/:category/:subcategory/:year/:month/inital-release.html
+path: articles/:category/inital-release.html
 route: articles
 description: "The Website is finally online, but it still has some issues that need to be resolved."
 thumbnail: /images/website_thumbnail.png
-category: updates
-subcategory: website
+category: website
+videos: false
 ---
 
 ### Release

@@ -14,27 +14,21 @@ route: home
 </div>
 
 <main>
-  <!-- categories -->
-  {% assign categories = "updates" | split: "|" %}
-
   <div class="text-wrapper width-1026 center">
-    {% for category in categories %}
-    <article class="tab-content show" style="border: 1px solid #eee">
+    <article class="tab-content show">
       <!-- Heading thumbnails -->
-      <h2 style="padding-left: 15px; margin-bottom: 0.5em;">Recent {{ category }}</h2>
+      <h2 style="padding-left: 15px; margin-bottom: 0.5em;">Latest releases</h2>
       <!-- Thumbnails  -->
       <div style="display: table">
-          {% for post in posts %}
-            {% if post.category == category %}
-            <!-- Increment a value to hold the amount of posts -->
-              <div class="thumbnail-crop">
-                <a data-article=".{{ post.subcategory }}" href="/{{ post.path }}">
+          {% for post in posts limit:8 %}
+              <div class="thumbnail-crop get-category">
+                <a data-article=".{{ post.category }}" href="/{{ post.path }}">
                   <div class="thumbnail-article">
                     <img src="{{ post.thumbnail }}" alt="image"/>
                   </div>
                 </a>
                 <h4>
-                  <a data-article=".{{ post.subcategory }}" href="/{{ post.path }}">{{ post.title }}</a>
+                  <a data-article=".{{ post.category }}" href="/{{ post.path }}">{{ post.title }}</a>
                 </h4>
                 <p class="text-label">
                   Published on
@@ -45,20 +39,8 @@ route: home
                 </p>
                 <div class="bottom-gradient"></div>
               </div>
-          {% endif%}
         {% endfor %}
       </div>
     </article>
-    {% endfor %}
   </div>
 </main>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-98419831-1', 'auto');
-  ga('send', 'pageview');
-
-</script>

@@ -2,12 +2,12 @@ extends: default.liquid
 
 title: "Initial release"
 date: 21 April 2017 21:00:00 +0100
-path: articles/:category/:subcategory/:year/:month/inital-release.html
+path: articles/:category/inital-release.html
 route: articles
 description: "The Rust book translated into Dutch."
 thumbnail: /images/rust_thumbnail.png
-category: updates
-subcategory: book
+category: book
+videos: false
 ---
 
 ### Release

@@ -27,15 +27,15 @@ path:    projects/rustbook/
     <div class="text-block width-750 center">
       <div class="page-tag">Technologies used mdbook</div>
     </div>
-    <div class="text-block width-750 center" style="font-size:18px;">
+    <div class="text-block width-750 center" style="font-size:18px; text-align: center">
       I started writing this book, because I wanted to learn Rust and also help the community in some way. So I translated the Rust book to Dutch.
       The book is generated with mdbook.
     </div>
-    <div class="text-wrapper width-1026 center clearfix">
+    <div class="text-wrapper width-750 center clearfix">
       <div class="thumbnail-project-page" style="float:left">
         <img src="/images/Cargo-Logo.png" alt="image"/>
       </div>
-      <div class="text-block width-50perc" style="float: left; height: 288.56px">
+      <div class="text-block width-50perc center-vertical" style="float: left; height: 288.56px">
         <div style="margin-bottom: 0.5em;">
         <h2 style="margin-top: 0">Cargo</h2>
         Cargo is a tool that Rustaceans use to help manage their Rust projects. Cargo manages three things: building our code,
@@ -43,7 +43,7 @@ path:    projects/rustbook/
         </div>
         <a href="http://doc.crates.io/guide.html"/>Read Guide</a>
       </div>
-      <div class="text-block width-50perc" style="float: left; height: 288.56px">
+      <div class="text-block width-50perc center-vertical" style="float: left; height: 288.56px">
         <h2 style="margin-top: 0">Crates.io</h2>
         Cargo is a tool that Rustaceans use to help manage their Rust projects. Cargo manages three things: building our code,
         downloading the dependencies our code needs, and building those dependencies.
@@ -57,13 +57,14 @@ path:    projects/rustbook/
       There are all sort of plugins avialable for different text editors.
     </div>
     <div class="text-block width-750 center">
-      <h2 style="margin-top: 0">Changelog</h2>
+      <h2 style="margin-top: 0">Releases notes</h2>
         {% for post in posts %}
-          {% if post.subcategory == "book"%}
-            <h4>
-              <span style="display:inline-block; width: 150px">{{post.date | date: "%e %b. %Y"}}</span>
-              <a data-article=".{{ post.subcategory }}" href="/{{post.path}}">{{post.title}}</a>
-            </h4>
+          {% if post.category == "book" %}
+            <h5 class="get-category">
+              <span style="display:inline-block; width: 100px">{{post.date | date: "%e %b. %Y"}}</span>
+              <a data-article=".{{ post.category }}" href="/{{post.path}}" style="display:inline-block; width: 150px">{{post.title}}</a>
+              <span style="display: inline-block; width: 450px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">{{ post.description }}</span>
+            </h5>
           {% endif %}
         {% endfor %}
     </div>

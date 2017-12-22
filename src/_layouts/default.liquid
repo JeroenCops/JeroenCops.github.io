@@ -1,12 +1,93 @@
 <!DOCTYPE html>
 <html>
   <head>
-    {{ include "_layouts/_head.liquid" }}
+    <!-- Social Site Meta Properties -->
+    <meta property="og:title" content="Jeroen Cops">
+    <meta property="og:image" content="jeroencops.github.io/assets/jeroen_cops_ico.png">
+    <meta property="og:site_name" content="Jeroen Cops">
+    <meta property="og:description" content="A portfolio of all the things I do and I'm interested in.">
+    <meta property="og:url" content="https://jeroencops.github.io/">
+    <meta property="og:type" content="website">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="A portfolio of all the things I do and I'm interested in.">
+    <meta name="keywords" content="rust, jeroen, cops, programming">
+    {% if is_post %}
+      <title>Jeroen Cops | {{ title }}</title>
+    {% else %}
+      <title>Jeroen Cops</title>
+    {% endif %}
+    <link rel="icon" type="image/png" href="/assets/jeroen_cops_ico.png" />
+
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Latest compiled and minified FontAwesome -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- Font Family -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Rubik" rel="stylesheet">
+    <!-- Load stylesheet -->
+    <link href="/css/main.css" rel="stylesheet" />
+
+    <!-- Latest compiled and minified jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <link href="https://jeroencops.github.io/rss.xml" rel="alternate" type="application/rss+xml" title="Jeroen Cops">
+
+    <!-- Load background -->
+    <script src='/js/jquery.animgradient.js'></script>
+    <!-- load side navigation -->
+    <script src='/js/jquery.sidenav.js'></script>
+    <!-- Load page nav -->
+    <script src='/js/jquery.pagenav.js'></script>
   </head>
   <body data-route={{route}}>
       <div id="gradient"></div>
-      {{ include "_layouts/_wrapper.liquid" }}
 
-      {{ include "_layouts/_footer.liquid" }}
+      <!-- Wrapper -->
+      <div class="site-wrapper">
+          <!-- header -->
+          <div class="masthead clearfix">
+            <a href="/">
+              <h3 class="masthead-brand"><img src="/assets/jeroen_cops.png">Jeroen Cops</h3>
+            </a>
+              <!-- Site navigation -->
+            <ul class="masthead-nav">
+              <li id="home" class="{%if route == "home"%}active{%endif%}"><a href="/">Home</a></li>
+              <li id="projects" class="{%if route == "projects"%}active{%endif%}"><a href="/projects/">Projects</a></li>
+              <li id="releases" class="{%if route == "releases"%}active{%endif%}"><a href="/releases/">Releases</a></li>
+              <li id="about" class="{%if route == "about"%}active{%endif%}"><a href="/about/">About</a></li>
+            </ul>
+            <!-- end side navigation -->
+          </div>
+
+        {% if is_post %}
+          <!-- Post contents -->
+          {% include "post.liquid" %}
+        {% else %}
+          <!-- Page contents -->
+          {{ content }}
+        {% endif %}
+      </div>
+      <!-- end wrapper -->
+
+      <footer class="mastfoot">
+        <!-- links -->
+        <div class="footer-list">
+            <a href="https://github.com/JeroenCops"><i class="fa fa-github" aria-hidden="true" style="font-size:28px;"></i></a>
+            <a href="https://github.com/JeroenCops/JeroenCops.github.io/tree/source"><i class="fa fa-code" aria-hidden="true" style="font-size:28px;"></i></a>
+            <a href="https://github.com/cobalt-org/cobalt.rs"><img class="cobalt-logo" aria-hidden="true" src="/assets/cobalt_logo.svg"/></a>
+            <a href="/rss.xml"><i class="fa fa-rss" aria-hidden="true" style="font-size:28px;"></i></a>
+        </div>
+        <!-- licenses -->
+        <p class="license"><a href="/license/">This website is licensed under a MIT License and the website contents under CC BY-SA 4.0</a>
+          <br />
+        </p>
+        <!-- end licenses -->
+      </footer>
   </body>
 </html>
