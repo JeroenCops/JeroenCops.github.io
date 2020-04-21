@@ -72,7 +72,6 @@ module.exports = {
     }
   },
   plugins: [
-    { resolve: `gatsby-plugin-preact` },
     { resolve: `gatsby-theme-sky-lite` },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -84,32 +83,6 @@ module.exports = {
         theme_color: `rebeccapurple`,
         display: `standalone`,
         icon: `src/images/favicon.png`
-      }
-    },
-    {
-      resolve: `gatsby-source-github-api`,
-      options: {
-        url: "https://api.github.com/graphql",
-        token: "702516c9adeb6fc557d15cf78ebbc5e3ed065f9f",
-        graphQLQuery: `
-        query ($author: String = "", $userFirst: Int = 0) {
-          user(login: $author) {
-            repositories(first: $userFirst) {
-              edges {
-                node {
-                  name
-                  description
-                  url
-                }
-              }
-            }
-          }
-        }
-        `,
-        variables: {
-          author: "JeroenCops",
-          userFirst: 6
-        }
       }
     }
   ]
