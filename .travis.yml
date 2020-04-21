@@ -1,24 +1,12 @@
 sudo: false
-language: rust
-rust:
-  - stable
-cache: cargo
-before_script:
-  - cd ..
-  - git clone https://github.com/cobalt-org/cobalt.rs.git
-  - cd cobalt.rs
-  - cargo install --force || true
-  - export PATH="$PATH:/home/travis/.cargo/bin"
-  - cd ..
-  - cd JeroenCops.github.io/src
+language: node_js
 script:
-  - cobalt --version
-  - cobalt build
+  - npm install -g gatsby
+node_js:
+  - "10"
 deploy:
-  provider: pages
+  provider: script
+  script: cd docs/ && yarn install && yarn run deploy
   skip_cleanup: true
-  github_token: $GH_TOKEN
-  local_dir: build
-  target_branch: master
   on:
-    all_branches: true
+    branch: master
