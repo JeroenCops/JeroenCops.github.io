@@ -8,7 +8,7 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "clean": "gatsby clean",
-    "deploy": "gatsby build --prefix-paths && master -d public -r https://$GH_TOKEN@github.com/JeroenCops/JeroenCops.github.io.git"
+    "deploy": "gatsby build --prefix-paths"
   },
   "dependencies": {
     "gatsby": "^2.17.11",
