@@ -1,13 +1,13 @@
 sudo: false
 language: node_js
-script:
+before_script:
   - npm install -g gatsby
 node_js:
   - "10"
 deploy:
   provider: script
   github_token: $GH_TOKEN
-  script: cd docs/ && yarn install && yarn run deploy
+  script: yarn install && yarn run deploy
   local_dir: build
   target_branch: master
   on:
