@@ -8,6 +8,7 @@ deploy:
   provider: script
   github_token: $GH_TOKEN
   script: cd docs/ && yarn install && yarn run deploy
-  skip_cleanup: true
+  local_dir: build
+  target_branch: master
   on:
-    branch: master
+    all_branches: true
