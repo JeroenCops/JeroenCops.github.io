@@ -2,7 +2,6 @@ sudo: false
 language: node_js
 script:
   - npm install -g gatsby
-  - cobalt build
 node_js:
   - "10"
 deploy:
