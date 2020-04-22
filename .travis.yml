@@ -2,12 +2,13 @@ sudo: false
 language: node_js
 before_script:
   - npm install -g gatsby
+script:
+  - gatsby build --prefix-paths
 node_js:
   - "10"
 deploy:
   provider: pages
   github_token: $GH_TOKEN
-  script: gatsby build --prefix-paths
   local_dir: public
   target_branch: master
   on:
