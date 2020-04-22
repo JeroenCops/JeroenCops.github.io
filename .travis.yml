@@ -3,7 +3,7 @@ language: node_js
 before_script:
   - npm install -g gatsby
 script:
-  - gatsby build --prefix-paths
+  - gatsby build
 node_js:
   - "10"
 deploy:
