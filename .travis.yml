@@ -2,7 +2,6 @@ sudo: false
 language: node_js
 before_script:
   - npm install -g gatsby
-  - npm install gatsby-theme-sky-lite
 script:
   - gatsby build
 node_js:
