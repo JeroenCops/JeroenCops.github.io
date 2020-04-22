@@ -1,1 +1,0 @@
-{"componentChunkName":"component---node-modules-gatsby-theme-sky-lite-src-templates-tag-js","path":"/tag/About","result":{"data":{"site":{"siteMetadata":{"templates":{"posts":{"pathPrefix":"posts","filters":{"tag":{"pathPrefix":"tag"}}}}}},"allMdx":{"edges":[]}},"pageContext":{"tag":"About","limit":3}}}
